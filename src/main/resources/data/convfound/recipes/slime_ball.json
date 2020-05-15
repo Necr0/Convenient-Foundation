@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "convfound:slime_harvest",
+    "ingredients": [
+        {
+            "item": "convfound:slime_bucket"
+        }
+    ],
+    "result": {
+        "item": "minecraft:slime_ball"
+    }
+}

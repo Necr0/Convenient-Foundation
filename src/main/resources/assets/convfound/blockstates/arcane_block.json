@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "convfound:block/arcane_block" }
+	}
+}

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "convfound:arcane_block"
+        }
+    ],
+    "result": {
+        "item": "convfound:arcane_dust",
+        "count": 9
+    }
+}
