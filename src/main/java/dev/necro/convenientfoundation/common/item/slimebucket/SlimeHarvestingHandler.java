@@ -1,23 +1,34 @@
 package dev.necro.convenientfoundation.common.item.slimebucket;
 
+import dev.necro.convenientfoundation.ConvenientFoundation;
 import dev.necro.convenientfoundation.common.item.ModItems;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = ConvenientFoundation.MODID)
 public class SlimeHarvestingHandler {
     private static final ResourceLocation SLIME_ID = new ResourceLocation("minecraft", "slime");
     private static final ResourceLocation MAGMA_CUBE_ID = new ResourceLocation("minecraft", "magma_cube");
 
     @SubscribeEvent
-    public static void onEntityInteract(PlayerInteractEvent.EntityInteract event){
+    public static void entityInteract(PlayerInteractEvent.EntityInteract event){
         ItemStack stack=event.getItemStack();
         PlayerEntity player=event.getPlayer();
 
@@ -41,6 +52,8 @@ public class SlimeHarvestingHandler {
                 new_stack=new ItemStack(ModItems.MAGMA_CREAM_BUCKET,1);
             else
                 return;
+            Item i;
+
 
             World world = event.getWorld();
 

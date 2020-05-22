@@ -10,9 +10,8 @@ import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.ObjectHolder;
 
-@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD, modid = ConvenientFoundation.MODID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = ConvenientFoundation.MODID)
 public class ModEntities {
     public static EntityType<UndeadMinerEntity> UNDEAD_MINER = null;
 
@@ -27,7 +26,7 @@ public class ModEntities {
                 .build("convfound:undead_miner")
                 .setRegistryName("undead_miner");
         registry.register(ModEntities.UNDEAD_MINER);
-        UNDEAD_MINER_SPAWN = new Biome.SpawnListEntry(ModEntities.UNDEAD_MINER,26,1,1);
+        UNDEAD_MINER_SPAWN = new Biome.SpawnListEntry(ModEntities.UNDEAD_MINER,35,1,1);
     }
 
     @SubscribeEvent

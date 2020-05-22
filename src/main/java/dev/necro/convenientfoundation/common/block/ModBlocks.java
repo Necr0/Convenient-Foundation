@@ -15,7 +15,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(ConvenientFoundation.MODID)
-@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD, modid = ConvenientFoundation.MODID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = ConvenientFoundation.MODID)
 public class ModBlocks {
     public static final Block ARCANE_BLOCK = null;
 

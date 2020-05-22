@@ -1,5 +1,6 @@
 package dev.necro.convenientfoundation.common.misc;
 
+import dev.necro.convenientfoundation.ConvenientFoundation;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.item.FallingBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,11 +9,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = ConvenientFoundation.MODID)
 public class FallingBlockDiggingHandler {
 
     @SubscribeEvent
-    public static void onEntityHit(AttackEntityEvent event){
+    public static void attackEntity(AttackEntityEvent event){
         if (!(event.getTarget() instanceof FallingBlockEntity))
             return;
 
